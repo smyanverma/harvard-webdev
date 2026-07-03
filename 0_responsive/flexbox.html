@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Basic Flex Container */
+        .flex-container {
+            display: flex;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .flex-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+            flex: 1;
+            border-radius: 5px;
+        }
+
+        /* Flex Direction - Row (default) */
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Flex Direction - Column */
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Justify Content - Center */
+        .justify-center {
+            display: flex;
+            justify-content: center;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Justify Content - Space Between */
+        .justify-between {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Align Items - Center */
+        .align-center {
+            display: flex;
+            align-items: center;
+            height: 150px;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Flex Wrap */
+        .flex-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .flex-wrap .flex-item {
+            flex: 0 0 30%;
+        }
+
+        /* Flex Grow and Shrink */
+        .flex-grow-container {
+            display: flex;
+            gap: 10px;
+            background-color: #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .flex-grow {
+            flex-grow: 2;
+            background-color: #2196F3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .flex-no-grow {
+            flex-grow: 1;
+            background-color: #FF9800;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Demonstrations</h1>
+
+    <h2>1. Basic Flex Container</h2>
+    <div class="flex-container">
+        <div class="flex-item">Box 1</div>
+        <div class="flex-item">Box 2</div>
+        <div class="flex-item">Box 3</div>
+    </div>
+
+    <h2>2. Flex Direction - Row (default)</h2>
+    <div class="flex-row">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <h2>3. Flex Direction - Column</h2>
+    <div class="flex-column">
+        <div class="flex-item">Top</div>
+        <div class="flex-item">Middle</div>
+        <div class="flex-item">Bottom</div>
+    </div>
+
+    <h2>4. Justify Content - Center</h2>
+    <div class="justify-center">
+        <div class="flex-item" style="flex: 0 0 auto;">Centered</div>
+    </div>
+
+    <h2>5. Justify Content - Space Between</h2>
+    <div class="justify-between">
+        <div class="flex-item" style="flex: 0 0 auto;">Left</div>
+        <div class="flex-item" style="flex: 0 0 auto;">Right</div>
+    </div>
+
+    <h2>6. Align Items - Center (Vertical Alignment)</h2>
+    <div class="align-center">
+        <div class="flex-item">Vertically Centered</div>
+    </div>
+
+    <h2>7. Flex Wrap</h2>
+    <div class="flex-wrap">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <h2>8. Flex Grow (Blue grows 2x more than Orange)</h2>
+    <div class="flex-grow-container">
+        <div class="flex-no-grow">Flex: 1</div>
+        <div class="flex-grow">Flex: 2</div>
+    </div>
+
+</body>
+</html>
