@@ -1,0 +1,9 @@
+🧠 Mental model (this will make it stick)
+Think of Git like a teacher taking attendance.
+git add = “These are the students in the class.”
+
+git commit -m = “Mark present only the students I listed.”
+
+git commit -am = “Mark present all students already in the class.”
+
+But if a new student walks in, -am ignores them because they’re not on the list yet.
