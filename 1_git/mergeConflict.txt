@@ -1,0 +1,59 @@
+🧠 When does Git warn you about a merge conflict?
+✔ During git pull
+Because git pull = git fetch + git merge.
+
+If the remote branch has changes that clash with your local changes, Git will stop and show:
+
+Code
+CONFLICT (content): Merge conflict in <file>
+Automatic merge failed; fix conflicts and commit the result.
+So yes — pulling is the moment Git warns you.
+
+🧠 Why does pull cause conflicts?
+Because when you pull, Git tries to merge:
+
+your local branch
+
+the updated remote branch
+
+If both changed the same lines, Git cannot choose automatically → conflict.
+
+🧠 What about pushing?
+❌ git push NEVER creates merge conflicts
+Push can only be rejected, not conflicted.
+
+Example:
+
+Code
+git push
+Git says:
+
+Code
+! rejected
+remote contains work you do not have
+This is NOT a conflict.
+It’s Git telling you:
+
+“Pull first.”
+
+Then when you run:
+
+Code
+git pull
+that is where the merge conflict may happen.
+
+🧠 What about merging branches?
+✔ git merge can also cause conflicts
+If you merge a feature branch into main and both changed the same lines → conflict.
+
+🎯 Summary (super clear)
+Action	Can cause merge conflict?	Why
+git merge	✔ Yes	Combining two branches
+git pull	✔ Yes	Pull = fetch + merge
+git push	❌ No	Push only uploads; conflict happens before push
+
+
+🧩 So your statement is correct:
+“oh so when u pull it will let u know”
+
+Yes — pull is exactly when Git warns you.
